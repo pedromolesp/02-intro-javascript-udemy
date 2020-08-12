@@ -11,6 +11,6 @@ ${1 + 1}
 console.log(nombreCompleto);
 
 function getSaludo(nombre) {
-  return "Hola " + nombre;
+    return "Hola " + nombre;
 }
 console.log(`Este es el saludo ${getSaludo(nombre)}`);
