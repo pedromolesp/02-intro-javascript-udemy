@@ -1,31 +1,10 @@
-const saludar = function (nombre) {
-  return `Hola, ${nombre}`;
-}
-const saludar2 = (nombre) => { return `Hola, ${nombre}`; }
+import { heroes } from './data/heroes';
 
+// console.log(heroes);
 
-const saludar3 = (nombre) => `Hola, ${nombre}`;
-const saludar4 = () => `Hola mundo`;
+const getHeroeById = (id) => heroes.find(heroe => heroe.id === id);
+// console.log(getHeroeById(4));
 
+const getHeroesByOwner = (owner) => heroes.filter((heroe) => heroe.owner === owner);
 
-console.log(saludar2('Pedrete'));
-console.log(saludar3('Pedreteeeee'));
-console.log(saludar4());
-
-const getUser = () => ({
-  uid: "dasf234",
-  username: "gary"
-
-});
-const user = getUser();
-console.log(user);
-
-const getUsuarioActivo = (nombre) => ({
-
-  uid: 'ABC567',
-  username: nombre
-
-});
-
-const usuarioActivo = getUsuarioActivo('Pedro');
-console.log(usuarioActivo);
+console.log(getHeroesByOwner("Marvel"));
