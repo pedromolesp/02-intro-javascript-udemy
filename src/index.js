@@ -1,10 +1,11 @@
-import { heroes } from './data/heroes';
+const activo = false;
 
-// console.log(heroes);
+// let mensaje = '';
 
-const getHeroeById = (id) => heroes.find(heroe => heroe.id === id);
-// console.log(getHeroeById(4));
-
-const getHeroesByOwner = (owner) => heroes.filter((heroe) => heroe.owner === owner);
-
-console.log(getHeroesByOwner("Marvel"));
+// if(activo){
+//     mensaje = 'Activo';
+// }else{
+//     mensaje = 'Inactivo';
+// }
+const mensaje = (activo) ? 'Activo' : 'Inactivo';
+console.log(mensaje);
